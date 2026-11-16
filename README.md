@@ -1,3 +1,11 @@
+> **Este modelo mudou de casa.** Agora ele é a ferramenta `wortic rastreio` do projeto único
+> [developer-wortic/ferramentas-rust](https://github.com/developer-wortic/ferramentas-rust) (pasta `crates/rastreio`), com o
+> histórico deste repositório, um binário só para as quatro ferramentas e jsonW em tudo. Este repositório fica
+> arquivado, só para leitura.
+>
+> *This template moved to [developer-wortic/ferramentas-rust](https://github.com/developer-wortic/ferramentas-rust)
+> (`wortic rastreio`). This repository is archived.*
+
 # Rastreio de campanhas e Conversions API da Meta em Rust
 
 <!-- GIF -->
