@@ -1,0 +1,28 @@
+[package]
+name = "rastreio-capi"
+version = "0.1.0"
+edition = "2024"
+description = "Biblioteca e modelo da Wortic: rastreio de campanhas (UTM, fbclid, gclid, ttclid, msclkid) e Conversions API da Meta, em Rust"
+license-file = "LICENSE"
+
+[lib]
+name = "rastreio_capi"
+path = "src/lib.rs"
+
+[[bin]]
+name = "rastreio-capi-modelo"
+path = "src/main.rs"
+
+[dependencies]
+base64 = "0.22"
+hmac = "0.12"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+sha2 = "0.10"
+tiny_http = "0.12"
+ureq = "2"
+
+[profile.release]
+opt-level = "s"
+lto = true
+strip = true

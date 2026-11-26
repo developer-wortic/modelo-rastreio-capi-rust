@@ -1,0 +1,49 @@
+name: "Evento recusado pela Meta"
+description: "A Conversions API recusou um evento, ou o modelo montou algo que a Meta não aceita"
+title: "[evento] "
+labels: ["evento"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Não cole token, e-mail, telefone, nome, IP nem o corpo completo do evento com dados de cliente.** Esta issue é pública.
+
+        Cole só o nome do evento, o código HTTP e a mensagem de erro da Meta, depois de trocar qualquer valor de cliente por `[oculto]`. O token nunca deve aparecer aqui.
+  - type: dropdown
+    id: evento
+    attributes:
+      label: Nome do evento
+      options:
+        - Purchase
+        - Lead
+        - InitiateCheckout
+        - PageView
+    validations:
+      required: true
+  - type: input
+    id: codigo
+    attributes:
+      label: Código HTTP e mensagem da Meta
+      description: Por exemplo, "HTTP 400: (#100) ..." sem o token
+      placeholder: "HTTP 400: mensagem da Graph API"
+    validations:
+      required: true
+  - type: textarea
+    id: campos
+    attributes:
+      label: Quais campos você mandou
+      description: Liste só os nomes dos campos de `user_data` e de `custom_data` (por exemplo, `em`, `ph`, `fbc`), sem os valores.
+    validations:
+      required: true
+  - type: input
+    id: versao
+    attributes:
+      label: Versão da Graph API
+      placeholder: "v27.0"
+  - type: checkboxes
+    id: privacidade
+    attributes:
+      label: Confirmação
+      options:
+        - label: Troquei os valores de cliente e o token por `[oculto]` antes de colar aqui.
+          required: true

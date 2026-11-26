@@ -1,0 +1,11 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Documentação da Conversions API da Meta
+    url: https://developers.facebook.com/docs/marketing-api/conversions-api
+    about: Formato do evento, parâmetros de cliente e regra de desduplicação.
+  - name: Planos da Wortic
+    url: https://wortic.com.br/planos
+    about: Painel de atribuição, CAPI gerenciada e envio ao Google e ao TikTok.
+  - name: Segurança
+    url: https://github.com/developer-wortic/modelo-rastreio-capi-rust/security/advisories/new
+    about: Falha de segurança entra por aqui, em privado. Veja o arquivo SECURITY.md.

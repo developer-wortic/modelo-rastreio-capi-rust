@@ -1,0 +1,46 @@
+name: "Bug"
+description: "Algo no modelo não funciona como deveria"
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Obrigado por reportar. Antes de abrir, rode `cargo test` e veja se a falha aparece.
+  - type: textarea
+    id: passos
+    attributes:
+      label: Como reproduzir
+      description: Passos curtos, do início até o erro.
+      placeholder: |
+        1. cargo run --release
+        2. Abra http://127.0.0.1:8080
+        3. Chame /r com uma URL de exemplo
+    validations:
+      required: true
+  - type: textarea
+    id: esperado
+    attributes:
+      label: O que você esperava
+    validations:
+      required: true
+  - type: textarea
+    id: ocorreu
+    attributes:
+      label: O que aconteceu
+      description: Cole a mensagem de erro ou a resposta, sem token, segredo ou dado pessoal.
+    validations:
+      required: true
+  - type: input
+    id: rust
+    attributes:
+      label: Versão do Rust
+      description: Saída de `rustc --version`
+      placeholder: "rustc 1.100.0"
+  - type: checkboxes
+    id: privacidade
+    attributes:
+      label: Confirmação
+      options:
+        - label: Não coloquei token, chave, segredo de cookie, e-mail, telefone, IP ou outro dado pessoal neste relato.
+          required: true

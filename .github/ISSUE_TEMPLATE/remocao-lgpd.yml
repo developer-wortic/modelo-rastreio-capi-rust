@@ -1,0 +1,36 @@
+name: "Pedido de dado pessoal (LGPD)"
+description: "Pedido de correção ou remoção de dado pessoal"
+title: "[LGPD] "
+labels: ["lgpd"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Não escreva aqui o seu CPF, e-mail, telefone ou outro dado pessoal.** Esta issue é pública.
+
+        Este modelo não guarda cadastro de pessoa: a memória da tela some quando o programa para, e a biblioteca não grava nada em disco. Se o dado está no seu sistema, o pedido vai para quem controla esse sistema.
+  - type: dropdown
+    id: pedido
+    attributes:
+      label: Tipo de pedido
+      options:
+        - Dúvida sobre o que o modelo guarda
+        - Correção de dado no meu sistema
+        - Remoção de dado no meu sistema
+        - Outro
+    validations:
+      required: true
+  - type: textarea
+    id: descricao
+    attributes:
+      label: Descreva o pedido, sem dado pessoal
+      description: Diga o que você quer saber ou o que precisa mudar, sem colar o dado.
+    validations:
+      required: true
+  - type: checkboxes
+    id: aviso
+    attributes:
+      label: Confirmação
+      options:
+        - label: Entendi que esta issue é pública e não colei dado pessoal nela.
+          required: true
